@@ -9,8 +9,9 @@ import br.org.coletivoJava.integracoes.gatewayPgto.api.FabApiRestGatewayPgtoRede
 import br.org.coletivojava.erp.gatewayPagamento.ItfCartaoCreditoDadosTransient;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.RespostaWebServiceRestIntegracao;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteRest;
+
 import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
 import org.coletivojava.fw.api.tratamentoErros.FabErro;
 
@@ -20,7 +21,7 @@ public class IntegracaoRestGtPgtoRedeEfetuarPagamentoSemCaptura
         AcaoApiIntegracaoAbstrato {
 
     public IntegracaoRestGtPgtoRedeEfetuarPagamentoSemCaptura(
-            final FabTipoAgenteClienteRest pTipoAgente,
+            final FabTipoAgenteClienteApi pTipoAgente,
             final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
         super(
                 FabApiRestGatewayPgtoRedeTransacoes.EFETUAR_PAGAMENTO_SEM_CAPTURA,
