@@ -5,7 +5,7 @@
  */
 package br.org.coletivoJava.integracoes.gatewayPgto.api;
 
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ComoFabricaIntegracaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.FabTipoConexaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.InfoConsumoRestService;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.FabTipoAutenticacaoRest;
@@ -23,7 +23,7 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
         nomeIntegracao = FabConfigApiRede.NOME_INTEGRACAO,
         configuracao = FabConfigApiRede.class
 )
-public enum FabApiRestGatewayPgtoRedeTransacoes implements ItfFabricaIntegracaoRest {
+public enum FabApiRestGatewayPgtoRedeTransacoes implements ComoFabricaIntegracaoRest {
 
     @InfoConsumoRestService(getPachServico = "/erede/v1/transactions",
             tipoConexao = FabTipoConexaoRest.POST, tipoInformacaoEnviada = FabTipoArquivoImportacao.JSON,
