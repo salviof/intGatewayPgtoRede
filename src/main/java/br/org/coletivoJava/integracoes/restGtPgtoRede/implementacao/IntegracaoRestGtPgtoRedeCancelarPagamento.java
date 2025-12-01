@@ -2,7 +2,7 @@ package br.org.coletivoJava.integracoes.restGtPgtoRede.implementacao;
 
 import br.org.coletivoJava.integracoes.restGtPgtoRede.api.InfoIntegracaoRestGtPgtoRedeTransacoes;
 import br.org.coletivoJava.integracoes.gatewayPgto.api.FabApiRestGatewayPgtoRedeTransacoes;
-import com.super_bits.modulosSB.SBCore.UtilGeral.UtilSBCoreNumeros;
+import com.super_bits.modulosSB.SBCore.UtilGeral.UtilCRCNumeros;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
 
@@ -23,7 +23,7 @@ public class IntegracaoRestGtPgtoRedeCancelarPagamento
     @Override
     public String gerarCorpoRequisicao() {
         double pValor = (double) parametros[1];
-        String valor = UtilSBCoreNumeros.converterNumeroToStrMoedaPadraoBanco(pValor);
+        String valor = UtilCRCNumeros.converterNumeroToStrMoedaPadraoBanco(pValor);
         return "{\n" + "  \"amount\": " + valor + "}";
     }
 
